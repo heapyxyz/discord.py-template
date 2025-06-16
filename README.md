@@ -21,7 +21,7 @@ A simple Discord.py bot ([with cogs](https://discordpy.readthedocs.io/en/stable/
     ```
 
 5. **Create Your First Command (Cog):**  
-    The bot automatically detects (recursively) cogs inside `src/cogs/` directory and loads them up. Here is a simple "hello" slash command to get you started:
+    The bot automatically detects (recursively) and loads cogs inside `src/cogs/` directory. Here is a simple "hello" slash command to get you started:
 
     ```py
     import discord
