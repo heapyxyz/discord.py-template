@@ -9,8 +9,6 @@ class Bot(commands.Bot):
         super().__init__(command_prefix="/", intents=intents)
 
     async def on_ready(self):
-        await self.tree.sync()
-
         if self.user:
             print(f"Logged in as @{self.user.name}")
 
