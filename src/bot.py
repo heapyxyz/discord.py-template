@@ -13,9 +13,9 @@ class Bot(commands.Bot):
             print(f"Logged in as @{self.user.name}")
 
     async def setup_hook(self):
-        cogs = glob.glob("src\\cogs\\**\\*.py", recursive=True)
+        cogs = glob.glob("src/cogs/**/*.py", recursive=True)
 
         for path in cogs:
-            cog = path.replace("\\", ".").removesuffix(".py")
+            cog = path.replace("/", ".").replace("\\", ".").removesuffix(".py")
             await self.load_extension(cog)
             print(f"Loaded {path} ({cog})")
