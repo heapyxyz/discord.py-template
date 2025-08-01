@@ -19,3 +19,5 @@ class Bot(commands.Bot):
             cog = path.replace("/", ".").replace("\\", ".").removesuffix(".py")
             await self.load_extension(cog)
             print(f"Loaded {path} ({cog})")
+
+        await self.tree.sync()
